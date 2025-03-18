@@ -1,4 +1,4 @@
-package com.java10x.CadastroDeNinjas;
+package com.java10x.CadastroDeNinjas.Ninjas;
 
 import jakarta.persistence.*;
 
@@ -13,6 +13,10 @@ public class NinjaModel {
     private String nome;
     private String email;
     private int idade;
+
+    @ManyToOne
+    @JoinColumn(name = "missao_id")
+    private String missoes;
 
     public NinjaModel() {
     }
